@@ -14,9 +14,9 @@ P & 0{,}1 & 2c & 0{,}3 & c
 \\end{array}$$
 a) Tìm hằng số $c$.
 b) Tính kỳ vọng toán học $E(X)$.
-c) Tính phương sai $Var(X)$ và độ lệch chuẩn $\\sigma(X)$.
+c) Tính phương sai $D(X)$ và độ lệch chuẩn $\\sigma(X)$.
 d) Tính kỳ vọng của đại lượng $Y = 3X^2 - 2X + 1$.`,
-    tips: "Tổng tất cả các xác suất trong bảng phân phối luôn bằng 1. Áp dụng công thức $Var(X) = E(X^2) - [E(X)]^2$ thay vì tính theo định nghĩa để tiết kiệm thời gian.",
+    tips: "Tổng tất cả các xác suất trong bảng phân phối luôn bằng 1. Áp dụng công thức $D(X) = E(X^2) - [E(X)]^2$ thay vì tính theo định nghĩa để tiết kiệm thời gian.",
     steps: [
       {
         stepTitle: "Bước 1: Tìm hằng số $c$",
@@ -37,14 +37,14 @@ $$E(X) = \\sum x_i p_i = (-1)(0{,}1) + 0(0{,}4) + 1(0{,}3) + 2(0{,}2)$$
 $$E(X) = -0{,}1 + 0 + 0{,}3 + 0{,}4 = 0{,}6$$`
       },
       {
-        stepTitle: "Bước 3: Tính phương sai $Var(X)$ và độ lệch chuẩn $\\sigma(X)$",
+        stepTitle: "Bước 3: Tính phương sai $D(X)$ và độ lệch chuẩn $\\sigma(X)$",
         stepContent: `Tính $E(X^2)$:
 $$E(X^2) = \\sum x_i^2 p_i = (-1)^2(0{,}1) + 0^2(0{,}4) + 1^2(0{,}3) + 2^2(0{,}2)$$
 $$E(X^2) = 1(0{,}1) + 0 + 1(0{,}3) + 4(0{,}2) = 0{,}1 + 0{,}3 + 0{,}8 = 1{,}2$$
 Áp dụng công thức phương sai:
-$$Var(X) = E(X^2) - [E(X)]^2 = 1{,}2 - (0{,}6)^2 = 1{,}2 - 0{,}36 = 0{,}84$$
+$$D(X) = E(X^2) - [E(X)]^2 = 1{,}2 - (0{,}6)^2 = 1{,}2 - 0{,}36 = 0{,}84$$
 Độ lệch chuẩn:
-$$\\sigma(X) = \\sqrt{Var(X)} = \\sqrt{0{,}84} \\approx 0{,}9165$$`
+$$\\sigma(X) = \\sqrt{D(X)} = \\sqrt{0{,}84} \\approx 0{,}9165$$`
       },
       {
         stepTitle: "Bước 4: Tính kỳ vọng của $Y = 3X^2 - 2X + 1$",
@@ -54,7 +54,7 @@ Thay số $E(X^2) = 1{,}2$ và $E(X) = 0{,}6$:
 $$E(Y) = 3(1{,}2) - 2(0{,}6) + 1 = 3{,}6 - 1{,}2 + 1 = 3{,}4$$`
       }
     ],
-    finalAnswer: "a) c = 0,2 | b) E(X) = 0,6 | c) Var(X) = 0,84, sigma(X) approx 0,9165 | d) E(Y) = 3,4"
+    finalAnswer: "a) c = 0,2 | b) E(X) = 0,6 | c) D(X) = 0,84, sigma(X) approx 0,9165 | d) E(Y) = 3,4"
   },
   {
     id: "ex-2-02",
@@ -156,8 +156,8 @@ $$P(X \\ge 2) = 1 - P(X \\le 1) = 1 - 0{,}9138 = 0{,}0862$$`
         stepTitle: "Bước 5: Câu d - Kỳ vọng và độ lệch chuẩn",
         stepContent: `Áp dụng công thức đặc trưng của phân phối nhị thức:
 $$E(X) = n p = 10 \\times 0{,}05 = 0{,}5 \\text{ phe pham}$$
-$$Var(X) = n p (1 - p) = 10 \\times 0{,}05 \\times 0{,}95 = 0{,}475$$
-$$\\sigma(X) = \\sqrt{Var(X)} = \\sqrt{0{,}475} \\approx 0{,}6892$$`
+$$D(X) = n p (1 - p) = 10 \\times 0{,}05 \\times 0{,}95 = 0{,}475$$
+$$\\sigma(X) = \\sqrt{D(X)} = \\sqrt{0{,}475} \\approx 0{,}6892$$`
       }
     ],
     finalAnswer: "a) P(X=2) approx 0,0746 | b) P(X<=1) approx 0,9138 | c) P(X>=2) approx 0,0862 | d) E(X) = 0,5; sigma(X) approx 0,6892"
@@ -322,7 +322,7 @@ Xấp xỉ Poisson đạt độ chính xác rất cao và giảm tải phép tí
     source: "Trích Đề thi & Bài tập lớn XSTK",
     problem: `Một hộp gồm 12 quả bóng bàn, trong đó có 4 quả màu vàng và 8 quả màu trắng. Người ta lấy ngẫu nhiên đồng thời (không hoàn lại) 3 quả bóng từ hộp.
 a) Lập bảng phân phối xác suất cho số quả bóng vàng được lấy ra ($X$).
-b) Tính kỳ vọng $E(X)$ và phương sai $Var(X)$.
+b) Tính kỳ vọng $E(X)$ và phương sai $D(X)$.
 c) So sánh với trường hợp lấy có hoàn lại từng quả một.`,
     tips: "Lấy không hoàn lại tương ứng phân phối Siêu bội $H(N, M, n)$ với $N=12, M=4, n=3$. Công thức: $P(X=k) = \\frac{C_M^k C_{N-M}^{n-k}}{C_N^n}$.",
     steps: [
@@ -349,19 +349,19 @@ Tổng kiểm tra: $\\frac{14+28+12+1}{55} = \\frac{55}{55} = 1$.`
         stepTitle: "Bước 3: Tính kỳ vọng và phương sai của $X$",
         stepContent: `Công thức đặc trưng của phân phối siêu bội:
 $$E(X) = n \\frac{M}{N} = 3 \\times \\frac{4}{12} = 3 \\times \\frac{1}{3} = 1$$
-$$Var(X) = n \\frac{M}{N} \\left(1 - \\frac{M}{N}\\right) \\frac{N - n}{N - 1}$$
+$$D(X) = n \\frac{M}{N} \\left(1 - \\frac{M}{N}\\right) \\frac{N - n}{N - 1}$$
 Thay số với $p = \\frac{M}{N} = \\frac{1}{3}$:
-$$Var(X) = 3 \\times \\frac{1}{3} \\times \\frac{2}{3} \\times \\frac{12 - 3}{12 - 1} = \\frac{2}{3} \\times \\frac{9}{11} = \\frac{6}{11} \\approx 0{,}5455$$`
+$$D(X) = 3 \\times \\frac{1}{3} \\times \\frac{2}{3} \\times \\frac{12 - 3}{12 - 1} = \\frac{2}{3} \\times \\frac{9}{11} = \\frac{6}{11} \\approx 0{,}5455$$`
       },
       {
         stepTitle: "Bước 4: So sánh với lấy mẫu có hoàn lại",
         stepContent: `Nếu lấy có hoàn lại, số bóng vàng $Y \\sim B(3, 1/3)$:
 $$E(Y) = n p = 1$$
-$$Var(Y) = n p (1-p) = 3 \\times \\frac{1}{3} \\times \\frac{2}{3} = \\frac{2}{3} \\approx 0{,}6667$$
+$$D(Y) = n p (1-p) = 3 \\times \\frac{1}{3} \\times \\frac{2}{3} = \\frac{2}{3} \\approx 0{,}6667$$
 Nhận xét: Kỳ vọng bằng nhau, nhưng phương sai của lấy không hoàn lại nhỏ hơn lấy có hoàn lại bởi hệ số hiệu chỉnh tổng thể hữu hạn $\\frac{N-n}{N-1} = \\frac{9}{11} < 1$.`
       }
     ],
-    finalAnswer: "a) P(0)=14/55; P(1)=28/55; P(2)=12/55; P(3)=1/55 | b) E(X) = 1; Var(X) = 6/11 approx 0,5455"
+    finalAnswer: "a) P(0)=14/55; P(1)=28/55; P(2)=12/55; P(3)=1/55 | b) E(X) = 1; D(X) = 6/11 approx 0,5455"
   },
   {
     id: "ex-2-08",
@@ -404,7 +404,7 @@ $$= 1 - [0{,}2 + 0{,}16 + 0{,}128] = 1 - 0{,}488 = 0{,}512$$`
         stepContent: `Kỳ vọng toán học của phân phối hình học:
 $$E(X) = \\frac{1}{p} = \\frac{1}{0{,}2} = 5$$ (lần khoan)
 Phương sai:
-$$Var(X) = \\frac{1 - p}{p^2} = \\frac{0{,}8}{0{,}04} = 20$$`
+$$D(X) = \\frac{1 - p}{p^2} = \\frac{0{,}8}{0{,}04} = 20$$`
       }
     ],
     finalAnswer: "a) X ~ G(0,2) | b) P(X=4) = 0,1024 | c) P(X>3) = 0,5120 | d) E(X) = 5 lần khoan"
@@ -479,7 +479,7 @@ $$f(x) = \\begin{cases}
 0 & \\text{khi } x \\notin [0, 1]
 \\end{cases}$$
 a) Tính kỳ vọng toán $E(X)$.
-b) Tính phương sai $Var(X)$ và độ lệch chuẩn $\\sigma(X)$.
+b) Tính phương sai $D(X)$ và độ lệch chuẩn $\\sigma(X)$.
 c) Tìm trung vị $Med(X)$ và xác suất $P(X > Med(X))$.`,
     tips: "Trung vị $Med(X)$ là giá trị $m$ sao cho $F(m) = \\int_{-\\infty}^m f(x)dx = 0{,}5$. Lưu ý với BNN liên tục, $P(X=a) = 0$.",
     steps: [
@@ -490,14 +490,14 @@ $$E(X) = \\int_{-\\infty}^{+\\infty} x f(x) dx = \\int_0^1 x (2x) dx = \\int_0^1
 $$E(X) = \\left[ \\frac{2x^3}{3} \\right]_0^1 = \\frac{2}{3} \\approx 0{,}6667$$`
       },
       {
-        stepTitle: "Bước 2: Tính $E(X^2)$ và phương sai $Var(X)$",
+        stepTitle: "Bước 2: Tính $E(X^2)$ và phương sai $D(X)$",
         stepContent: `Tính mômen bậc 2:
 $$E(X^2) = \\int_{-\\infty}^{+\\infty} x^2 f(x) dx = \\int_0^1 x^2 (2x) dx = \\int_0^1 2x^3 dx$$
 $$E(X^2) = \\left[ \\frac{2x^4}{4} \\right]_0^1 = \\left[ \\frac{x^4}{2} \\right]_0^1 = \\frac{1}{2} = 0{,}5$$
 Áp dụng công thức phương sai:
-$$Var(X) = E(X^2) - [E(X)]^2 = \\frac{1}{2} - \\left(\\frac{2}{3}\\right)^2 = \\frac{1}{2} - \\frac{4}{9} = \\frac{1}{18} \\approx 0{,}0556$$
+$$D(X) = E(X^2) - [E(X)]^2 = \\frac{1}{2} - \\left(\\frac{2}{3}\\right)^2 = \\frac{1}{2} - \\frac{4}{9} = \\frac{1}{18} \\approx 0{,}0556$$
 Độ lệch chuẩn:
-$$\\sigma(X) = \\sqrt{Var(X)} = \\sqrt{\\frac{1}{18}} = \\frac{1}{3\\sqrt{2}} \\approx 0{,}2357$$`
+$$\\sigma(X) = \\sqrt{D(X)} = \\sqrt{\\frac{1}{18}} = \\frac{1}{3\\sqrt{2}} \\approx 0{,}2357$$`
       },
       {
         stepTitle: "Bước 3: Tìm trung vị $m = Med(X)$",
@@ -510,7 +510,7 @@ Do đó $Med(X) = \\frac{\\sqrt{2}}{2}$.
 Theo định nghĩa trung vị: $P(X > Med(X)) = 1 - 0{,}5 = 0{,}5$.`
       }
     ],
-    finalAnswer: "a) E(X) = 2/3 | b) Var(X) = 1/18 approx 0,0556; sigma(X) approx 0,2357 | c) Med(X) = sqrt(2)/2 approx 0,7071"
+    finalAnswer: "a) E(X) = 2/3 | b) D(X) = 1/18 approx 0,0556; sigma(X) approx 0,2357 | c) Med(X) = sqrt(2)/2 approx 0,7071"
   },
   {
     id: "ex-2-11",
@@ -542,7 +542,7 @@ $$f(x) = \\begin{cases}
         stepContent: `Kỳ vọng toán:
 $$E(X) = \\frac{a + b}{2} = \\frac{0 + 15}{2} = 7{,}5$$ (phút)
 Phương sai và độ lệch chuẩn:
-$$Var(X) = \\frac{(b - a)^2}{12} = \\frac{15^2}{12} = \\frac{225}{12} = 18{,}75$$
+$$D(X) = \\frac{(b - a)^2}{12} = \\frac{15^2}{12} = \\frac{225}{12} = 18{,}75$$
 $$\\sigma(X) = \\sqrt{18{,}75} = \\frac{15}{2\\sqrt{3}} \\approx 4{,}3301$$ (phút)`
       },
       {
@@ -724,7 +724,7 @@ c) Tính số giải thưởng $k$ sao cho xác suất đạt giải không vư�
         stepContent: `Gọi $X$ là số học sinh đạt giải: $X \\sim B(n = 400, p = 0{,}25)$.
 Ta có:
 $$\\mu = E(X) = n p = 400 \\times 0{,}25 = 100$$
-$$\\sigma^2 = Var(X) = n p (1 - p) = 400 \\times 0{,}25 \\times 0{,}75 = 75$$
+$$\\sigma^2 = D(X) = n p (1 - p) = 400 \\times 0{,}25 \\times 0{,}75 = 75$$
 $$\\sigma = \\sqrt{75} = 5\\sqrt{3} \\approx 8{,}6603$$
 Do $np = 100 > 5$ và $nq = 300 > 5$, theo định lý Moivre-Laplace, $X$ xấp xỉ chuẩn $N(100; 75)$.`
       },

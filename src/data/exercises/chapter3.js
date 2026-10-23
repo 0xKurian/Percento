@@ -65,7 +65,7 @@ X \\backslash Y & 1 & 3 \\\\ \\hline
 1 & 0{,}1 & 0{,}2
 \\end{array}$$
 a) Lập bảng phân phối xác suất biên của $X$ và của $Y$.
-b) Tính kỳ vọng $E(X), E(Y)$ và phương sai $Var(X), Var(Y)$.`,
+b) Tính kỳ vọng $E(X), E(Y)$ và phương sai $D(X), D(Y)$.`,
     tips: "Xác suất biên của $X$ là tổng theo từng hàng: $p_{i\\bullet} = \\sum_j p_{ij}$. Xác suất biên của $Y$ là tổng theo từng cột: $p_{\\bullet j} = \\sum_i p_{ij}$.",
     steps: [
       {
@@ -92,21 +92,21 @@ P & 0{,}4 & 0{,}6
 \\end{array}$$`
       },
       {
-        stepTitle: "Bước 3: Tính $E(X), Var(X)$",
+        stepTitle: "Bước 3: Tính $E(X), D(X)$",
         stepContent: `Kỳ vọng và phương sai của $X$:
 $$E(X) = (-1)(0{,}3) + 0(0{,}4) + 1(0{,}3) = 0$$
 $$E(X^2) = (-1)^2(0{,}3) + 0^2(0{,}4) + 1^2(0{,}3) = 0{,}3 + 0{,}3 = 0{,}6$$
-$$Var(X) = E(X^2) - [E(X)]^2 = 0{,}6 - 0 = 0{,}6$$`
+$$D(X) = E(X^2) - [E(X)]^2 = 0{,}6 - 0 = 0{,}6$$`
       },
       {
-        stepTitle: "Bước 4: Tính $E(Y), Var(Y)$",
+        stepTitle: "Bước 4: Tính $E(Y), D(Y)$",
         stepContent: `Kỳ vọng và phương sai của $Y$:
 $$E(Y) = 1(0{,}4) + 3(0{,}6) = 0{,}4 + 1{,}8 = 2{,}2$$
 $$E(Y^2) = 1^2(0{,}4) + 3^2(0{,}6) = 0{,}4 + 5{,}4 = 5{,}8$$
-$$Var(Y) = E(Y^2) - [E(Y)]^2 = 5{,}8 - (2{,}2)^2 = 5{,}8 - 4{,}84 = 0{,}96$$`
+$$D(Y) = E(Y^2) - [E(Y)]^2 = 5{,}8 - (2{,}2)^2 = 5{,}8 - 4{,}84 = 0{,}96$$`
       }
     ],
-    finalAnswer: "a) Đã lập bảng ở bước 1 và 2 | b) E(X) = 0, Var(X) = 0,6 | E(Y) = 2,2, Var(Y) = 0,96"
+    finalAnswer: "a) Đã lập bảng ở bước 1 và 2 | b) E(X) = 0, D(X) = 0,6 | E(Y) = 2,2, D(Y) = 0,96"
   },
   {
     id: "ex-3-03",
@@ -169,7 +169,7 @@ X \\backslash Y & 1 & 2 & 3 \\\\ \\hline
 \\end{array}$$
 a) Lập bảng phân phối xác suất có điều kiện của $Y$ với điều kiện $X = 2$.
 b) Tính kỳ vọng có điều kiện $E(Y \\mid X = 2)$.
-c) Tính phương sai có điều kiện $Var(Y \\mid X = 2)$.`,
+c) Tính phương sai có điều kiện $D(Y \\mid X = 2)$.`,
     tips: "Công thức phân phối có điều kiện: $P(Y = y_j \\mid X = x_i) = \\frac{P(X = x_i, Y = y_j)}{P(X = x_i)}$. Kỳ vọng có điều kiện tính như kỳ vọng thông thường trên hàng đó.",
     steps: [
       {
@@ -197,16 +197,16 @@ $$E(Y \\mid X = 2) = \\sum y_j P(Y = y_j \\mid X = 2)$$
 $$= 1 \\left(\\frac{1}{3}\\right) + 2 \\left(\\frac{1}{6}\\right) + 3 \\left(\\frac{1}{2}\\right) = \\frac{1}{3} + \\frac{1}{3} + \\frac{3}{2} = \\frac{2}{3} + \\frac{3}{2} = \\frac{13}{6} \\approx 2{,}1667$$`
       },
       {
-        stepTitle: "Bước 4: Tính phương sai có điều kiện $Var(Y \\mid X = 2)$",
+        stepTitle: "Bước 4: Tính phương sai có điều kiện $D(Y \\mid X = 2)$",
         stepContent: `Tính $E(Y^2 \\mid X = 2)$:
 $$E(Y^2 \\mid X = 2) = 1^2 \\left(\\frac{1}{3}\\right) + 2^2 \\left(\\frac{1}{6}\\right) + 3^2 \\left(\\frac{1}{2}\\right)$$
 $$= \\frac{1}{3} + \\frac{4}{6} + \\frac{9}{2} = \\frac{1}{3} + \\frac{2}{3} + \\frac{9}{2} = 1 + 4{,}5 = 5{,}5 = \\frac{11}{2}$$
 Phương sai có điều kiện:
-$$Var(Y \\mid X = 2) = E(Y^2 \\mid X = 2) - [E(Y \\mid X = 2)]^2$$
+$$D(Y \\mid X = 2) = E(Y^2 \\mid X = 2) - [E(Y \\mid X = 2)]^2$$
 $$= \\frac{11}{2} - \\left(\\frac{13}{6}\\right)^2 = \\frac{11}{2} - \\frac{169}{36} = \\frac{198 - 169}{36} = \\frac{29}{36} \\approx 0{,}8056$$`
       }
     ],
-    finalAnswer: "a) P(Y=1|X=2)=1/3, P(Y=2|X=2)=1/6, P(Y=3|X=2)=1/2 | b) E(Y|X=2) = 13/6 approx 2,1667 | c) Var(Y|X=2) = 29/36 approx 0,8056"
+    finalAnswer: "a) P(Y=1|X=2)=1/3, P(Y=2|X=2)=1/6, P(Y=3|X=2)=1/2 | b) E(Y|X=2) = 13/6 approx 2,1667 | c) D(Y|X=2) = 29/36 approx 0,8056"
   },
   {
     id: "ex-3-05",
@@ -234,7 +234,7 @@ c) Nhận xét về mối quan hệ tương quan tuyến tính giữa $X$ và $Y
 - $P(X=2) = 0{,}2 + 0{,}3 + 0{,}1 = 0{,}6$
 $$E(X) = 1(0{,}4) + 2(0{,}6) = 1{,}6$$
 $$E(X^2) = 1^2(0{,}4) + 2^2(0{,}6) = 0{,}4 + 2{,}4 = 2{,}8$$
-$$Var(X) = 2{,}8 - (1{,}6)^2 = 2{,}8 - 2{,}56 = 0{,}24 \\implies \\sigma_X = \\sqrt{0{,}24} \\approx 0{,}4899$$
+$$D(X) = 2{,}8 - (1{,}6)^2 = 2{,}8 - 2{,}56 = 0{,}24 \\implies \\sigma_X = \\sqrt{0{,}24} \\approx 0{,}4899$$
 
 Phân phối biên của $Y$:
 - $P(Y=0) = 0{,}1 + 0{,}2 = 0{,}3$
@@ -242,7 +242,7 @@ Phân phối biên của $Y$:
 - $P(Y=2) = 0{,}1 + 0{,}1 = 0{,}2$
 $$E(Y) = 0(0{,}3) + 1(0{,}5) + 2(0{,}2) = 0{,}9$$
 $$E(Y^2) = 0^2(0{,}3) + 1^2(0{,}5) + 2^2(0{,}2) = 0{,}5 + 0{,}8 = 1{,}3$$
-$$Var(Y) = 1{,}3 - (0{,}9)^2 = 1{,}3 - 0{,}81 = 0{,}49 \\implies \\sigma_Y = \\sqrt{0{,}49} = 0{,}7$$`
+$$D(Y) = 1{,}3 - (0{,}9)^2 = 1{,}3 - 0{,}81 = 0{,}49 \\implies \\sigma_Y = \\sqrt{0{,}49} = 0{,}7$$`
       },
       {
         stepTitle: "Bước 2: Tính kỳ vọng tích $E(XY)$",
@@ -342,13 +342,13 @@ Cả hai cách đều cho kết quả $1{,}9$.`
     title: "Bài tập 7: Kỳ vọng và Phương sai của Tổ hợp tuyến tính Z = aX + bY",
     source: "Trích Đề thi & Bài tập lớn XSTK",
     problem: `Cho hai biến ngẫu nhiên $X$ và $Y$ thỏa mãn:
-$$E(X) = 5, \\quad Var(X) = 4, \\quad E(Y) = -2, \\quad Var(Y) = 9$$
+$$E(X) = 5, \\quad D(X) = 4, \\quad E(Y) = -2, \\quad D(Y) = 9$$
 và hệ số tương quan giữa chúng là $\\rho_{XY} = -0{,}5$.
 Xét biến ngẫu nhiên $Z = 3X - 2Y + 4$.
 a) Tính kỳ vọng toán $E(Z)$.
 b) Tính hiệp phương sai $Cov(X, Y)$.
-c) Tính phương sai $Var(Z)$ và độ lệch chuẩn $\\sigma_Z$.`,
-    tips: "Công thức phương sai tổ hợp tuyến tính tổng quát: $Var(aX + bY) = a^2 Var(X) + b^2 Var(Y) + 2ab Cov(X, Y)$. Chú ý dấu của $ab$ và $Cov(X, Y)$.",
+c) Tính phương sai $D(Z)$ và độ lệch chuẩn $\\sigma_Z$.`,
+    tips: "Công thức phương sai tổ hợp tuyến tính tổng quát: $D(aX + bY) = a^2 D(X) + b^2 D(Y) + 2ab Cov(X, Y)$. Chú ý dấu của $ab$ và $Cov(X, Y)$.",
     steps: [
       {
         stepTitle: "Bước 1: Câu a - Tính kỳ vọng $E(Z)$",
@@ -361,21 +361,21 @@ $$E(Z) = 3(5) - 2(-2) + 4 = 15 + 4 + 4 = 23$$`
         stepTitle: "Bước 2: Câu b - Tính hiệp phương sai $Cov(X, Y)$",
         stepContent: `Từ công thức hệ số tương quan:
 $$\\rho_{XY} = \\frac{Cov(X, Y)}{\\sigma_X \\sigma_Y} \\implies Cov(X, Y) = \\rho_{XY} \\sigma_X \\sigma_Y$$
-Ta có $\\sigma_X = \\sqrt{Var(X)} = \\sqrt{4} = 2$ và $\\sigma_Y = \\sqrt{Var(Y)} = \\sqrt{9} = 3$.
+Ta có $\\sigma_X = \\sqrt{D(X)} = \\sqrt{4} = 2$ và $\\sigma_Y = \\sqrt{D(Y)} = \\sqrt{9} = 3$.
 $$Cov(X, Y) = (-0{,}5) \\times 2 \\times 3 = -3$$`
       },
       {
-        stepTitle: "Bước 3: Câu c - Tính phương sai $Var(Z)$",
+        stepTitle: "Bước 3: Câu c - Tính phương sai $D(Z)$",
         stepContent: `Áp dụng công thức phương sai cho $Z = 3X - 2Y + 4$ (hằng số cộng thêm không làm đổi phương sai):
-$$Var(Z) = Var(3X - 2Y) = 3^2 Var(X) + (-2)^2 Var(Y) + 2(3)(-2) Cov(X, Y)$$
-$$Var(Z) = 9 Var(X) + 4 Var(Y) - 12 Cov(X, Y)$$
+$$D(Z) = D(3X - 2Y) = 3^2 D(X) + (-2)^2 D(Y) + 2(3)(-2) Cov(X, Y)$$
+$$D(Z) = 9 D(X) + 4 D(Y) - 12 Cov(X, Y)$$
 Thay các giá trị:
-$$Var(Z) = 9(4) + 4(9) - 12(-3) = 36 + 36 + 36 = 108$$
+$$D(Z) = 9(4) + 4(9) - 12(-3) = 36 + 36 + 36 = 108$$
 Độ lệch chuẩn:
 $$\\sigma_Z = \\sqrt{108} = 6\\sqrt{3} \\approx 10{,}3923$$`
       }
     ],
-    finalAnswer: "a) E(Z) = 23 | b) Cov(X,Y) = -3 | c) Var(Z) = 108, sigma_Z approx 10,3923"
+    finalAnswer: "a) E(Z) = 23 | b) Cov(X,Y) = -3 | c) D(Z) = 108, sigma_Z approx 10,3923"
   },
   {
     id: "ex-3-08",
@@ -667,7 +667,7 @@ $$f(x, y) = \\begin{cases}
 \\end{cases}$$
 a) Tính các kỳ vọng $E(X), E(Y)$ và $E(XY)$.
 b) Tính hiệp phương sai $Cov(X, Y)$.
-c) Tính phương sai $Var(X), Var(Y)$ và hệ số tương quan Pearson $\\rho_{XY}$.`,
+c) Tính phương sai $D(X), D(Y)$ và hệ số tương quan Pearson $\\rho_{XY}$.`,
     tips: "Miền lấy tích phân là tam giác $0 \\le x \\le y \\le 1$. Tích phân $E(X) = \\iint x f(x, y) dx dy$ hoặc sử dụng các hàm mật độ biên đã tìm ở bài tập 10.",
     steps: [
       {
@@ -698,11 +698,11 @@ $$= \\frac{4}{9} - \\frac{32}{75} = \\frac{100 - 96}{225} = \\frac{4}{225} \\app
         stepTitle: "Bước 4: Tính hệ số tương quan $\\rho_{XY}$",
         stepContent: `Tính các mômen bậc hai:
 $$E(X^2) = \\int_0^1 x^2 \\cdot 4x(1 - x^2) dx = 4 \\int_0^1 (x^3 - x^5) dx = 4 \\left( \\frac{1}{4} - \\frac{1}{6} \\right) = 4 \\times \\frac{1}{12} = \\frac{1}{3}$$
-$$Var(X) = \\frac{1}{3} - \\left(\\frac{8}{15}\\right)^2 = \\frac{1}{3} - \\frac{64}{225} = \\frac{75 - 64}{225} = \\frac{11}{225}$$
+$$D(X) = \\frac{1}{3} - \\left(\\frac{8}{15}\\right)^2 = \\frac{1}{3} - \\frac{64}{225} = \\frac{75 - 64}{225} = \\frac{11}{225}$$
 $$E(Y^2) = \\int_0^1 y^2 \\cdot 4y^3 dy = 4 \\int_0^1 y^5 dy = \\frac{4}{6} = \\frac{2}{3}$$
-$$Var(Y) = \\frac{2}{3} - \\left(\\frac{4}{5}\\right)^2 = \\frac{2}{3} - \\frac{16}{25} = \\frac{50 - 48}{75} = \\frac{2}{75} = \\frac{6}{225}$$
+$$D(Y) = \\frac{2}{3} - \\left(\\frac{4}{5}\\right)^2 = \\frac{2}{3} - \\frac{16}{25} = \\frac{50 - 48}{75} = \\frac{2}{75} = \\frac{6}{225}$$
 Hệ số tương quan:
-$$\\rho_{XY} = \\frac{Cov(X, Y)}{\\sqrt{Var(X) Var(Y)}} = \\frac{4/225}{\\sqrt{\\frac{11}{225} \\times \\frac{6}{225}}} = \\frac{4}{\\sqrt{66}} \\approx \\frac{4}{8{,}124} \\approx 0{,}4924$$`
+$$\\rho_{XY} = \\frac{Cov(X, Y)}{\\sqrt{D(X) D(Y)}} = \\frac{4/225}{\\sqrt{\\frac{11}{225} \\times \\frac{6}{225}}} = \\frac{4}{\\sqrt{66}} \\approx \\frac{4}{8{,}124} \\approx 0{,}4924$$`
       }
     ],
     finalAnswer: "a) E(X)=8/15, E(Y)=4/5, E(XY)=4/9 | b) Cov(X,Y) = 4/225 | c) rho_{XY} = 4/sqrt(66) approx 0,4924"

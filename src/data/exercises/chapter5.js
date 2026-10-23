@@ -752,7 +752,7 @@ c) Tính lực kiểm định (Power of the Test: $1 - \\beta$).
       {
         stepTitle: "Bước 1: Tính phân phối của trung bình mẫu $\\overline{X}$",
         stepContent: `Với $n = 25$ và $\\sigma^2 = 100$:
-$$Var(\\overline{X}) = \\frac{\\sigma^2}{n} = \\frac{100}{25} = 4 \\implies \\sigma_{\\overline{X}} = \\sqrt{4} = 2$$
+$$D(\\overline{X}) = \\frac{\\sigma^2}{n} = \\frac{100}{25} = 4 \\implies \\sigma_{\\overline{X}} = \\sqrt{4} = 2$$
 Quy tắc quyết định: Bác bỏ $H_0$ nếu $\\overline{x} \\ge 53$.`
       },
       {

@@ -113,7 +113,7 @@ Vậy ước lượng hợp lý cực đại $\\widehat{\\lambda}_{MLE} = \\over
     problem: `Cho mẫu ngẫu nhiên $X_1, X_2, \\dots, X_n$ từ tổng thể phân phối đều $U(0, \\theta)$ với tham số $\\theta > 0$ chưa biết.
 a) Dùng phương pháp mômen tìm ước lượng $\\widehat{\\theta}_{MME}$.
 b) Kiểm tra tính không chệch của $\\widehat{\\theta}_{MME}$.
-c) Tính phương sai của ước lượng $Var(\\widehat{\\theta}_{MME})$.`,
+c) Tính phương sai của ước lượng $D(\\widehat{\\theta}_{MME})$.`,
     tips: "Phương pháp mômen: Đồng nhất mômen lý thuyết $\\alpha_k = E(X^k)$ với mômen mẫu $m_k = \\frac{1}{n}\\sum X_i^k$. Với 1 tham số, chỉ cần giải $\\alpha_1 = m_1 \\iff E(X) = \\overline{X}$.",
     steps: [
       {
@@ -134,15 +134,15 @@ Vì $E(\\widehat{\\theta}_{MME}) = \\theta$, nên $\\widehat{\\theta}_{MME}$ là
       {
         stepTitle: "Bước 3: Tính phương sai của ước lượng",
         stepContent: `Phương sai của biến ngẫu nhiên $X \\sim U(0, \\theta)$:
-$$Var(X) = \\frac{(\\theta - 0)^2}{12} = \\frac{\\theta^2}{12}$$
+$$D(X) = \\frac{(\\theta - 0)^2}{12} = \\frac{\\theta^2}{12}$$
 Do các $X_i$ độc lập cùng phân phối:
-$$Var(\\overline{X}) = \\frac{Var(X)}{n} = \\frac{\\theta^2}{12n}$$
+$$D(\\overline{X}) = \\frac{D(X)}{n} = \\frac{\\theta^2}{12n}$$
 Phương sai của ước lượng:
-$$Var(\\widehat{\\theta}_{MME}) = Var(2\\overline{X}) = 4 Var(\\overline{X}) = 4 \\times \\frac{\\theta^2}{12n} = \\frac{\\theta^2}{3n}$$
-Khi kích thước mẫu $n \\to \\infty$, $Var(\\widehat{\\theta}) \\to 0$, chứng minh ước lượng này cũng có tính vững.`
+$$D(\\widehat{\\theta}_{MME}) = D(2\\overline{X}) = 4 D(\\overline{X}) = 4 \\times \\frac{\\theta^2}{12n} = \\frac{\\theta^2}{3n}$$
+Khi kích thước mẫu $n \\to \\infty$, $D(\\widehat{\\theta}) \\to 0$, chứng minh ước lượng này cũng có tính vững.`
       }
     ],
-    finalAnswer: "a) theta_MME = 2*X_bar | b) Không chệch vì E(theta_MME) = theta | c) Var(theta_MME) = theta^2 / (3n)"
+    finalAnswer: "a) theta_MME = 2*X_bar | b) Không chệch vì E(theta_MME) = theta | c) D(theta_MME) = theta^2 / (3n)"
   },
   {
     id: "ex-4-04",
