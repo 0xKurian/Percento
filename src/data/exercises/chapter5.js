@@ -58,7 +58,7 @@ Kết luận: Ở mức ý nghĩa $5\\%$, có đầy đủ bằng chứng thốn
     difficulty: "Trọng tâm thi",
     title: "Bài tập 2: Kiểm định phía phải cho kỳ vọng với mẫu lớn chưa biết phương sai",
     source: "Trích Đề thi & Bài tập lớn XSTK",
-    problem: `Năng suất trung bình trước đây của một giống ngô là 45 tạ/ha. Áp dụng kỹ thuật chăm sóc mới trên 100 thửa ruộng thí nghiệm thu được năng suất trung bình mẫu là $\\overline{x} = 46{,}2\ \text{ ta/ha}$ với độ lệch chuẩn mẫu hiệu chỉnh $s' = 4\ \text{ ta/ha}$.
+    problem: `Năng suất trung bình trước đây của một giống ngô là 45 tạ/ha. Áp dụng kỹ thuật chăm sóc mới trên 100 thửa ruộng thí nghiệm thu được năng suất trung bình mẫu là $\\overline{x} = 46{,}2\\ \\text{ ta/ha}$ với độ lệch chuẩn mẫu hiệu chỉnh $s' = 4\\ \\text{ ta/ha}$.
 Với mức ý nghĩa $\\alpha = 0{,}01$, có thể kết luận rằng kỹ thuật mới thực sự làm tăng năng suất ngô hay không?
 (Cho biết $u_{0{,}01} = 2{,}326$).`,
     tips: "Kiểm định phía phải: $H_1: \\mu > \\mu_0$. Miền bác bỏ: $W_\\alpha = (u_\\alpha; +\\infty)$. Chú ý mức phân vị là $u_\\alpha$ chứ không phải $u_{\\alpha/2}$.",
@@ -68,8 +68,8 @@ Với mức ý nghĩa $\\alpha = 0{,}01$, có thể kết luận rằng kỹ thu
         stepContent: `Gọi $\\mu$ là năng suất trung bình khi áp dụng kỹ thuật mới.
 Kiểm định phía phải:
 $$\\begin{cases}
-H_0: \\mu = 45\ \text{ ta/ha}  \\\\
-H_1: \\mu > 45\ \text{ ta/ha} 
+H_0: \\mu = 45\\ \\text{ ta/ha}  \\\\
+H_1: \\mu > 45\\ \\text{ ta/ha} 
 \\end{cases}$$`
       },
       {

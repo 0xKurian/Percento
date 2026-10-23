@@ -10,7 +10,7 @@ export const chapter4Exercises = [
     problem: `Khảo sát thời gian hoàn thành một tác vụ (phút) của 50 lập trình viên, ta thu được bảng số liệu ghép nhóm:
 $$\\begin{array}{c|ccccc}
 \\text{Khoang gia tri} & [10, 14) & [14, 18) & [18, 22) & [22, 26) & [26, 30] \\\\ \\hline
-\n_i & 6 & 14 & 18 & 8 & 4
+\\n_i & 6 & 14 & 18 & 8 & 4
 \\end{array}$$
 a) Xác định giá trị đại diện của từng lớp và tính trung bình mẫu $\\overline{x}$.
 b) Tính phương sai mẫu $s^2$, phương sai mẫu hiệu chỉnh $s'^2$ và độ lệch chuẩn hiệu chỉnh $s'$.
@@ -33,7 +33,7 @@ Tổng kích thước mẫu: $n = 6 + 14 + 18 + 8 + 4 = 50$.`
 $$\\sum n_i x_i = 6(12) + 14(16) + 18(20) + 8(24) + 4(28)$$
 $$= 72 + 224 + 360 + 192 + 112 = 960$$
 Trung bình mẫu:
-$$\\overline{x} = \\frac{\\sum n_i x_i}{n} = \\frac{960}{50} = 19{,}2 \ \text{ phut}$$`
+$$\\overline{x} = \\frac{\\sum n_i x_i}{n} = \\frac{960}{50} = 19{,}2 \\ \\text{ phut}$$`
       },
       {
         stepTitle: "Bước 3: Tính phương sai mẫu và phương sai hiệu chỉnh",
@@ -46,7 +46,7 @@ $$s^2 = \\frac{1}{n} \\sum n_i x_i^2 - (\\overline{x})^2 = \\frac{19392}{50} - (
 Phương sai mẫu hiệu chỉnh:
 $$s'^2 = \\frac{n}{n - 1} s^2 = \\frac{50}{49} \\times 19{,}2 \\approx 19{,}5918$$
 Độ lệch chuẩn hiệu chỉnh:
-$$s' = \\sqrt{19{,}5918} \\approx 4{,}4263 \ \text{ phut}$$`
+$$s' = \\sqrt{19{,}5918} \\approx 4{,}4263 \\ \\text{ phut}$$`
       },
       {
         stepTitle: "Bước 4: Tính hệ số biến thiên $CV$",
@@ -197,10 +197,10 @@ Nhận xét: Khi độ tin cậy tăng từ $95\\%$ lên $99\\%$, độ dài kho
     title: "Bài tập 5: Ước lượng khoảng cho kỳ vọng khi chưa biết phương sai (Mẫu lớn)",
     source: "Trích Đề thi & Bài tập lớn XSTK",
     problem: `Để ước lượng mức tiêu thụ nhiên liệu trung bình của một dòng xe ô tô mới, người ta cho chạy thử nghiệm ngẫu nhiên $n = 64$ xe trong cùng điều kiện và thu được kết quả:
-- Mức tiêu hao trung bình mẫu: $\\overline{x} = 6{,}5\ \text{ lit/100km}$
-- Phương sai mẫu hiệu chỉnh: $s'^2 = 0{,}64\ \text{ (lit/100km)}^2$
+- Mức tiêu hao trung bình mẫu: $\\overline{x} = 6{,}5\\ \\text{ lit/100km}$
+- Phương sai mẫu hiệu chỉnh: $s'^2 = 0{,}64\\ \\text{ (lit/100km)}^2$
 a) Hãy tìm khoảng tin cậy $95\\%$ cho mức tiêu hao nhiên liệu trung bình $\\mu$ của dòng xe này.
-b) Với độ tin cậy $95\\%$, mức tiêu hao trung bình có vượt quá $6{,}7\ \text{ lit/100km}$ hay không?
+b) Với độ tin cậy $95\\%$, mức tiêu hao trung bình có vượt quá $6{,}7\\ \\text{ lit/100km}$ hay không?
 (Cho biết $u_{0{,}025} = 1{,}96$).`,
     tips: "Vì kích thước mẫu lớn $n = 64 \\ge 30$, theo định lý giới hạn trung tâm, ta dùng phân vị chuẩn $u_{\\alpha/2}$ với độ lệch chuẩn mẫu hiệu chỉnh $s'$ thay thế cho $\\sigma$.",
     steps: [
@@ -209,24 +209,24 @@ b) Với độ tin cậy $95\\%$, mức tiêu hao trung bình có vượt quá $
         stepContent: `Kích thước mẫu: $n = 64 \\ge 30$ (mẫu lớn).
 Trung bình mẫu: $\\overline{x} = 6{,}5$.
 Độ lệch chuẩn mẫu hiệu chỉnh:
-$$s' = \\sqrt{s'^2} = \\sqrt{0{,}64} = 0{,}8\ \text{ (lit/100km)}$$
+$$s' = \\sqrt{s'^2} = \\sqrt{0{,}64} = 0{,}8\\ \\text{ (lit/100km)}$$
 Độ tin cậy $1 - \\alpha = 0{,}95 \\implies u_{\\alpha/2} = u_{0{,}025} = 1{,}96$.`
       },
       {
         stepTitle: "Bước 2: Tính độ chính xác của ước lượng $\\epsilon$",
         stepContent: `Áp dụng công thức sai số cho mẫu lớn:
-$$\\epsilon = u_{\\alpha/2} \\frac{s'}{\\sqrt{n}} = 1{,}96 \\times \\frac{0{,}8}{\\sqrt{64}} = 1{,}96 \\times \\frac{0{,}8}{8} = 1{,}96 \\times 0{,}1 = 0{,}196\ \text{ (lit/100km)}$$`
+$$\\epsilon = u_{\\alpha/2} \\frac{s'}{\\sqrt{n}} = 1{,}96 \\times \\frac{0{,}8}{\\sqrt{64}} = 1{,}96 \\times \\frac{0{,}8}{8} = 1{,}96 \\times 0{,}1 = 0{,}196\\ \\text{ (lit/100km)}$$`
       },
       {
         stepTitle: "Bước 3: Xác định khoảng tin cậy $95\\%$",
         stepContent: `Khoảng ước lượng hai phía:
 $$(\\overline{x} - \\epsilon ; \\overline{x} + \\epsilon) = (6{,}5 - 0{,}196 ; 6{,}5 + 0{,}196) = (6{,}304 ; 6{,}696)$$
-Kết luận: Với độ tin cậy $95\\%$, mức tiêu thụ nhiên liệu trung bình thực tế nằm trong khoảng $[6{,}304 ; 6{,}696]\ \text{ lit/100km}$.`
+Kết luận: Với độ tin cậy $95\\%$, mức tiêu thụ nhiên liệu trung bình thực tế nằm trong khoảng $[6{,}304 ; 6{,}696]\\ \\text{ lit/100km}$.`
       },
       {
         stepTitle: "Bước 4: Trả lời câu hỏi b",
-        stepContent: `Cận trên của khoảng tin cậy $95\\%$ là $6{,}696\ \text{ lit/100km} < 6{,}7\ \text{ lit/100km}$.
-Do đó, với độ tin cậy $95\\%$, ta có thể khẳng định mức tiêu thụ nhiên liệu trung bình của dòng xe không vượt quá $6{,}7\ \text{ lit/100km}$.`
+        stepContent: `Cận trên của khoảng tin cậy $95\\%$ là $6{,}696\\ \\text{ lit/100km} < 6{,}7\\ \\text{ lit/100km}$.
+Do đó, với độ tin cậy $95\\%$, ta có thể khẳng định mức tiêu thụ nhiên liệu trung bình của dòng xe không vượt quá $6{,}7\\ \\text{ lit/100km}$.`
       }
     ],
     finalAnswer: "a) Khoảng 95%: [6,304 ; 6,696] lít/100km | b) Không vượt quá 6,7 lít/100km"
@@ -332,14 +332,14 @@ $$M_{max} = N \\times p_{max} = 50000 \\times 0{,}08327 = 4163{,}5 \\approx 4164
     title: "Bài tập 8: Xác định kích thước mẫu tối thiểu khi ước lượng kỳ vọng",
     source: "Trích Đề thi & Bài tập lớn XSTK",
     problem: `Người ta muốn ước lượng tuổi thọ trung bình của một loại pin điện thoại sao cho sai số của ước lượng không vượt quá 20 giờ với độ tin cậy $95\\%$.
-a) Giả sử qua các nghiên cứu trước đây đã biết độ lệch chuẩn tuổi thọ là $\\sigma = 80\ \text{ h}$. Cần khảo sát mẫu tối thiểu bao nhiêu quả pin?
+a) Giả sử qua các nghiên cứu trước đây đã biết độ lệch chuẩn tuổi thọ là $\\sigma = 80\\ \\text{ h}$. Cần khảo sát mẫu tối thiểu bao nhiêu quả pin?
 b) Nếu muốn giảm sai số xuống còn 10 giờ (giảm một nửa) trong khi giữ nguyên độ tin cậy thì cỡ mẫu phải thay đổi như thế nào?
 (Cho biết $u_{0{,}025} = 1{,}96$).`,
     tips: "Công thức cỡ mẫu tối thiểu: $n \\ge \\left(\\frac{u_{\\alpha/2} \\sigma}{\\epsilon}\\right)^2$. Khi muốn giảm sai số đi $k$ lần thì cỡ mẫu phải tăng lên $k^2$ lần.",
     steps: [
       {
         stepTitle: "Bước 1: Thiết lập công thức tính cỡ mẫu",
-        stepContent: `Độ chính xác yêu cầu: $\\epsilon = u_{\\alpha/2} \\frac{\\sigma}{\\sqrt{n}} \\le \\epsilon_0 = 20\ \text{ h}$.
+        stepContent: `Độ chính xác yêu cầu: $\\epsilon = u_{\\alpha/2} \\frac{\\sigma}{\\sqrt{n}} \\le \\epsilon_0 = 20\\ \\text{ h}$.
 Bình phương hai vế và rút ra $n$:
 $$n \\ge \\left( \\frac{u_{\\alpha/2} \\sigma}{\\epsilon_0} \\right)^2$$`
       },
@@ -351,11 +351,11 @@ Vì cỡ mẫu $n$ phải là số nguyên dương, luôn làm tròn lên số n
 $$n_{min} = 62 $$ (quả pin)`
       },
       {
-        stepTitle: "Bước 3: Giải câu b - Khi giảm sai số xuống một nửa ($\\epsilon_0' = 10\ \text{ h}$)",
+        stepTitle: "Bước 3: Giải câu b - Khi giảm sai số xuống một nửa ($\\epsilon_0' = 10\\ \\text{ h}$)",
         stepContent: `Tính trực tiếp:
 $$n' \\ge \\left( \\frac{1{,}96 \\times 80}{10} \\right)^2 = (1{,}96 \\times 8)^2 = (15{,}68)^2 = 245{,}86 \\implies n_{min}' = 246$$
 Nhận xét: Vì $n \\propto \\frac{1}{\\epsilon^2}$, nên khi giảm sai số đi 2 lần:
-$$\\frac{n'}{n} \\approx 2^2 = 4 \ \text{ lan}$$
+$$\\frac{n'}{n} \\approx 2^2 = 4 \\ \\text{ lan}$$
 Cỡ mẫu phải tăng lên gấp 4 lần để tăng độ chính xác lên gấp đôi.`
       }
     ],
@@ -411,7 +411,7 @@ Nhận xét: Nhờ thông tin sơ bộ, kích thước mẫu cần khảo sát g
     difficulty: "Nâng cao",
     title: "Bài tập 10: Ước lượng khoảng một phía cho tuổi thọ thiết bị",
     source: "Trích Đề thi & Bài tập lớn XSTK",
-    problem: `Khảo sát ngẫu nhiên tuổi thọ của 49 bóng đèn công nghiệp, ta thu được tuổi thọ trung bình mẫu là $\\overline{x} = 1520\ \text{ h}$ và độ lệch chuẩn mẫu hiệu chỉnh $s' = 140\ \text{ h}$.
+    problem: `Khảo sát ngẫu nhiên tuổi thọ của 49 bóng đèn công nghiệp, ta thu được tuổi thọ trung bình mẫu là $\\overline{x} = 1520\\ \\text{ h}$ và độ lệch chuẩn mẫu hiệu chỉnh $s' = 140\\ \\text{ h}$.
 a) Hãy tìm khoảng tin cậy chặn dưới với độ tin cậy $95\\%$ cho tuổi thọ trung bình $\\mu$ của loại bóng đèn này.
 b) Nhà sản xuất muốn công bố tuổi thọ tối thiểu cam kết với khách hàng với độ tin cậy $95\\%$, con số đó nên là bao nhiêu?
 (Cho biết $u_{0{,}05} = 1{,}645$; $u_{0{,}025} = 1{,}96$).`,
@@ -421,23 +421,23 @@ b) Nhà sản xuất muốn công bố tuổi thọ tối thiểu cam kết vớ
         stepTitle: "Bước 1: Phân tích bài toán ước lượng chặn dưới",
         stepContent: `Yêu cầu tìm giá trị $\\mu_{min}$ sao cho $P(\\mu > \\mu_{min}) = 1 - \\alpha = 0{,}95$.
 Kích thước mẫu: $n = 49 \\ge 30 \\implies \\sqrt{n} = 7$.
-Trung bình mẫu: $\\overline{x} = 1520\ \text{ h}$, độ lệch chuẩn $s' = 140\ \text{ h}$.
+Trung bình mẫu: $\\overline{x} = 1520\\ \\text{ h}$, độ lệch chuẩn $s' = 140\\ \\text{ h}$.
 Mức ý nghĩa $\\alpha = 0{,}05$. Tra bảng phân vị chuẩn một phía: $u_\\alpha = u_{0{,}05} = 1{,}645$.`
       },
       {
         stepTitle: "Bước 2: Tính độ chính xác một phía $\\epsilon$",
         stepContent: `Áp dụng công thức sai số ước lượng một phía:
-$$\\epsilon = u_\\alpha \\frac{s'}{\\sqrt{n}} = 1{,}645 \\times \\frac{140}{\\sqrt{49}} = 1{,}645 \\times \\frac{140}{7} = 1{,}645 \\times 20 = 32{,}9\ \text{ h}$$`
+$$\\epsilon = u_\\alpha \\frac{s'}{\\sqrt{n}} = 1{,}645 \\times \\frac{140}{\\sqrt{49}} = 1{,}645 \\times \\frac{140}{7} = 1{,}645 \\times 20 = 32{,}9\\ \\text{ h}$$`
       },
       {
         stepTitle: "Bước 3: Xác định khoảng tin cậy chặn dưới",
         stepContent: `Khoảng ước lượng chặn dưới:
-$$\\mu > \\overline{x} - \\epsilon \\iff \\mu > 1520 - 32{,}9 = 1487{,}1\ \text{ h}$$
+$$\\mu > \\overline{x} - \\epsilon \\iff \\mu > 1520 - 32{,}9 = 1487{,}1\\ \\text{ h}$$
 Khoảng tin cậy: $[1487{,}1 ; +\\infty)$.`
       },
       {
         stepTitle: "Bước 4: Kết luận con số cam kết tối thiểu",
-        stepContent: `Với độ tin cậy $95\\%$, nhà sản xuất có thể cam kết rằng tuổi thọ trung bình của loại bóng đèn công nghiệp này đạt ít nhất $1487{,}1\ \text{ h}$ (hoặc làm tròn an toàn là $1487\ \text{ h}$).`
+        stepContent: `Với độ tin cậy $95\\%$, nhà sản xuất có thể cam kết rằng tuổi thọ trung bình của loại bóng đèn công nghiệp này đạt ít nhất $1487{,}1\\ \\text{ h}$ (hoặc làm tròn an toàn là $1487\\ \\text{ h}$).`
       }
     ],
     finalAnswer: "a) Khoảng chặn dưới: [1487,1 giờ ; +infty) | b) Cam kết tuổi thọ tối thiểu 1487 giờ"
@@ -534,8 +534,8 @@ Khoảng tin cậy $90\\%$ cho độ lệch chuẩn là $[1{,}693 ; 2{,}880]$.`
     title: "Bài tập 13: Khoảng tin cậy cho hiệu hai kỳ vọng (Mẫu lớn độc lập)",
     source: "Trích Đề thi & Bài tập lớn XSTK",
     problem: `Người ta muốn so sánh năng suất trung bình của hai phương pháp canh tác lúa $A$ và $B$. Thử nghiệm trên hai nhóm ruộng độc lập thu được kết quả:
-- Phương pháp $A$: $n_1 = 50$, $\\overline{x}_1 = 65\ \text{ ta/ha}$, $s'_1 = 4\ \text{ ta/ha}$.
-- Phương pháp $B$: $n_2 = 60$, $\\overline{x}_2 = 61\ \text{ ta/ha}$, $s'_2 = 5\ \text{ ta/ha}$.
+- Phương pháp $A$: $n_1 = 50$, $\\overline{x}_1 = 65\\ \\text{ ta/ha}$, $s'_1 = 4\\ \\text{ ta/ha}$.
+- Phương pháp $B$: $n_2 = 60$, $\\overline{x}_2 = 61\\ \\text{ ta/ha}$, $s'_2 = 5\\ \\text{ ta/ha}$.
 a) Tìm khoảng tin cậy $95\\%$ cho hiệu năng suất trung bình $(\\mu_1 - \\mu_2)$.
 b) Có thể khẳng định phương pháp $A$ cho năng suất trung bình cao hơn phương pháp $B$ với độ tin cậy $95\\%$ hay không?
 (Cho biết $u_{0{,}025} = 1{,}96$).`,
@@ -544,25 +544,25 @@ b) Có thể khẳng định phương pháp $A$ cho năng suất trung bình cao
       {
         stepTitle: "Bước 1: Tính hiệu trung bình mẫu và sai số chuẩn",
         stepContent: `Hiệu trung bình hai mẫu:
-$$\\overline{x}_1 - \\overline{x}_2 = 65 - 61 = 4\ \text{ ta/ha}$$
+$$\\overline{x}_1 - \\overline{x}_2 = 65 - 61 = 4\\ \\text{ ta/ha}$$
 Sai số chuẩn của hiệu hai mẫu:
 $$SE = \\sqrt{\\frac{s'^2_1}{n_1} + \\frac{s'^2_2}{n_2}} = \\sqrt{\\frac{4^2}{50} + \\frac{5^2}{60}} = \\sqrt{\\frac{16}{50} + \\frac{25}{60}}$$
-$$SE = \\sqrt{0{,}32 + 0{,}4167} = \\sqrt{0{,}7367} \\approx 0{,}8583\ \text{ ta/ha}$$`
+$$SE = \\sqrt{0{,}32 + 0{,}4167} = \\sqrt{0{,}7367} \\approx 0{,}8583\\ \\text{ ta/ha}$$`
       },
       {
         stepTitle: "Bước 2: Tính độ chính xác ước lượng $\\epsilon$",
         stepContent: `Với độ tin cậy $95\\% \\implies u_{0{,}025} = 1{,}96$:
-$$\\epsilon = u_{\\alpha/2} \\times SE = 1{,}96 \\times 0{,}8583 \\approx 1{,}6823\ \text{ ta/ha}$$`
+$$\\epsilon = u_{\\alpha/2} \\times SE = 1{,}96 \\times 0{,}8583 \\approx 1{,}6823\\ \\text{ ta/ha}$$`
       },
       {
         stepTitle: "Bước 3: Xác định khoảng tin cậy $95\\%$ cho $(\\mu_1 - \\mu_2)$",
         stepContent: `Khoảng ước lượng:
 $$((\\overline{x}_1 - \\overline{x}_2) - \\epsilon ; (\\overline{x}_1 - \\overline{x}_2) + \\epsilon) = (4 - 1{,}6823 ; 4 + 1{,}6823) = (2{,}3177 ; 5{,}6823)$$
-Tức là với độ tin cậy $95\\%$, hiệu năng suất nằm trong khoảng $[2{,}32 ; 5{,}68]\ \text{ ta/ha}$.`
+Tức là với độ tin cậy $95\\%$, hiệu năng suất nằm trong khoảng $[2{,}32 ; 5{,}68]\\ \\text{ ta/ha}$.`
       },
       {
         stepTitle: "Bước 4: Kết luận so sánh hai phương pháp",
-        stepContent: `Vì toàn bộ khoảng tin cậy $(2{,}318 ; 5{,}682)$ đều nằm hoàn toàn bên phải số 0 (cận dưới $> 0$), ta có thể khẳng định chắc chắn với độ tin cậy $95\\%$ rằng phương pháp canh tác $A$ cho năng suất trung bình cao hơn phương pháp $B$, cụ thể là cao hơn từ $2{,}32$ đến $5{,}68\ \text{ ta/ha}$.`
+        stepContent: `Vì toàn bộ khoảng tin cậy $(2{,}318 ; 5{,}682)$ đều nằm hoàn toàn bên phải số 0 (cận dưới $> 0$), ta có thể khẳng định chắc chắn với độ tin cậy $95\\%$ rằng phương pháp canh tác $A$ cho năng suất trung bình cao hơn phương pháp $B$, cụ thể là cao hơn từ $2{,}32$ đến $5{,}68\\ \\text{ ta/ha}$.`
       }
     ],
     finalAnswer: "a) Khoảng 95%: [2,3177 ; 5,6823] tạ/ha | b) Khẳng định phương pháp A cao hơn B"
