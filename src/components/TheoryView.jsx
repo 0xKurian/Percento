@@ -156,7 +156,7 @@ export default function TheoryView() {
                     </h3>
                   </div>
 
-                  <div className="text-xs sm:text-sm text-[#262626] dark:text-[#d4d4d4]">
+                  <div className="text-sm sm:text-base text-[#262626] dark:text-[#d4d4d4]">
                     <FormattedMath text={sec.content} />
                   </div>
                 </div>

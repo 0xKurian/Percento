@@ -306,21 +306,21 @@ export default function HomeView({ setActiveTab }) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           <div className="p-3 bg-[#fbfbfa] dark:bg-[#1a1a1a] rounded-lg border border-[#e5e5e5] dark:border-white/10 text-center">
             <span className="text-[11px] font-mono text-[#696969] dark:text-[#8c8c8c] block mb-1">Công thức Bayes (Chương I - 2đ)</span>
-            <div className="font-mono text-xs py-1">
+            <div className="font-mono text-sm sm:text-base py-1.5">
               <MathView math="P(H_i|A) = \frac{P(H_i)P(A|H_i)}{\sum P(H_k)P(A|H_k)}" />
             </div>
           </div>
 
           <div className="p-3 bg-[#fbfbfa] dark:bg-[#1a1a1a] rounded-lg border border-[#e5e5e5] dark:border-white/10 text-center">
             <span className="text-[11px] font-mono text-[#696969] dark:text-[#8c8c8c] block mb-1">Khoảng tin cậy TB (Chương IV - 4đ)</span>
-            <div className="font-mono text-xs py-1">
+            <div className="font-mono text-sm sm:text-base py-1.5">
               <MathView math="\mu \in \left[ \bar{x} \pm u_{\alpha/2} \frac{s'}{\sqrt{n}} \right]" />
             </div>
           </div>
 
           <div className="p-3 bg-[#fbfbfa] dark:bg-[#1a1a1a] rounded-lg border border-[#e5e5e5] dark:border-white/10 text-center">
             <span className="text-[11px] font-mono text-[#696969] dark:text-[#8c8c8c] block mb-1">Tiêu chuẩn kiểm định (Chương V - 1đ)</span>
-            <div className="font-mono text-xs py-1">
+            <div className="font-mono text-sm sm:text-base py-1.5">
               <MathView math="Z_{qs} = \frac{\bar{x} - \mu_0}{s'} \sqrt{n} \sim N(0, 1)" />
             </div>
           </div>

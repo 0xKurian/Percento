@@ -41,14 +41,24 @@
   display: none !important;
 }
 
+.katex {
+  font-size: 1.14em !important;
+  text-rendering: optimizeLegibility;
+}
+
 .katex-display {
-  margin: 0.85rem 0 !important;
+  margin: 1rem 0 !important;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 0.75rem 1rem !important;
+  padding: 0.85rem 1.25rem !important;
   background-color: #fbfbfa;
   border: 1px solid #e5e5e5;
-  border-radius: 0.5rem;
+  border-radius: 0.6rem;
+}
+
+.katex-display > .katex {
+  font-size: 1.28em !important;
+  line-height: 1.6;
 }
 
 .dark .katex-display {
@@ -57,7 +67,8 @@
 }
 
 .markdown-math-content {
-  line-height: 1.7;
+  font-size: 0.95rem;
+  line-height: 1.8;
   color: #262626;
 }
 

@@ -47,12 +47,12 @@ export default function CheatSheetView() {
               <h2 className="text-xs font-bold text-[#171717] dark:text-[#f5f5f5] mb-2">
                 {it.name}
               </h2>
-              <div className="space-y-1.5 font-mono text-xs">
-                <div className="p-2 bg-amber-50/70 dark:bg-amber-950/30 rounded border border-amber-200/40 dark:border-amber-900/40 text-amber-900 dark:text-amber-200 font-semibold flex justify-between">
+              <div className="space-y-1.5 font-mono text-xs sm:text-sm">
+                <div className="p-2 bg-amber-50/70 dark:bg-amber-950/30 rounded border border-amber-200/40 dark:border-amber-900/40 text-amber-900 dark:text-amber-200 font-semibold flex justify-between items-center">
                   <span>Hai phía:</span>
                   <MathView math={it.twoSided} />
                 </div>
-                <div className="p-2 bg-[#f5f5f5] dark:bg-[#262626] rounded border border-[#e5e5e5] dark:border-white/10 text-[#171717] dark:text-[#f5f5f5] flex justify-between">
+                <div className="p-2 bg-[#f5f5f5] dark:bg-[#262626] rounded border border-[#e5e5e5] dark:border-white/10 text-[#171717] dark:text-[#f5f5f5] flex justify-between items-center">
                   <span>Một phía:</span>
                   <MathView math={it.oneSided} />
                 </div>
@@ -79,7 +79,7 @@ export default function CheatSheetView() {
                 {f.title}
               </h2>
               <p className="text-[11px] text-[#8c8c8c] mb-2 font-mono">{f.condition}</p>
-              <div className="p-2.5 bg-white dark:bg-[#202020] rounded border border-[#e5e5e5] dark:border-white/10 overflow-x-auto text-center font-mono">
+              <div className="p-3 bg-white dark:bg-[#202020] rounded border border-[#e5e5e5] dark:border-white/10 overflow-x-auto text-center font-mono text-sm sm:text-base">
                 <MathView math={f.formula} block={true} />
               </div>
             </div>
@@ -94,7 +94,7 @@ export default function CheatSheetView() {
         </div>
 
         <div className="overflow-x-auto">
-          <table className="w-full text-xs text-left border border-[#e5e5e5] dark:border-white/10 rounded-lg overflow-hidden">
+          <table className="w-full text-xs sm:text-sm text-left border border-[#e5e5e5] dark:border-white/10 rounded-lg overflow-hidden">
             <thead className="bg-[#f5f5f5] dark:bg-[#262626] text-[#171717] dark:text-[#f5f5f5]">
               <tr>
                 <th className="p-2.5">Bài toán</th>

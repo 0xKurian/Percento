@@ -21,7 +21,7 @@ export function MathView({ math, block = false, className = '' }) {
   if (block) {
     return (
       <div
-        className={`my-3 overflow-x-auto py-1 text-slate-900 dark:text-slate-100 font-math ${className}`}
+        className={`my-3.5 overflow-x-auto py-1.5 text-slate-900 dark:text-slate-100 font-math text-base sm:text-lg ${className}`}
         dangerouslySetInnerHTML={{ __html: html }}
       />
     );
@@ -29,7 +29,7 @@ export function MathView({ math, block = false, className = '' }) {
 
   return (
     <span
-      className={`inline-block px-0.5 text-slate-900 dark:text-slate-100 font-math ${className}`}
+      className={`inline-block px-0.5 text-slate-900 dark:text-slate-100 font-math text-[1.08em] ${className}`}
       dangerouslySetInnerHTML={{ __html: html }}
     />
   );
@@ -55,7 +55,7 @@ export function FormattedMath({ text, className = '' }) {
       } catch (e) {
         rendered = math;
       }
-      mathMap.set(key, `<div class="my-3 overflow-x-auto py-1 text-center font-math">${rendered}</div>`);
+      mathMap.set(key, `<div class="my-3.5 overflow-x-auto py-1.5 text-center font-math text-base sm:text-lg">${rendered}</div>`);
       return `\n\n${key}\n\n`;
     });
 
@@ -72,7 +72,7 @@ export function FormattedMath({ text, className = '' }) {
       } catch (e) {
         rendered = math;
       }
-      mathMap.set(key, `<span class="inline-block px-0.5 font-math">${rendered}</span>`);
+      mathMap.set(key, `<span class="inline-block px-0.5 font-math text-[1.08em]">${rendered}</span>`);
       return key;
     });
 

@@ -296,7 +296,7 @@ export default function ExercisesView() {
                 {ex.title}
               </h2>
 
-              <div className="bg-[#fbfbfa] dark:bg-[#1a1a1a] p-3.5 sm:p-4 rounded-lg border border-[#e5e5e5] dark:border-white/10 text-xs sm:text-sm text-[#262626] dark:text-[#d4d4d4] mb-3 leading-relaxed">
+              <div className="bg-[#fbfbfa] dark:bg-[#1a1a1a] p-3.5 sm:p-4 rounded-lg border border-[#e5e5e5] dark:border-white/10 text-sm sm:text-base text-[#262626] dark:text-[#d4d4d4] mb-3 leading-relaxed">
                 <FormattedMath text={ex.problem} />
               </div>
 
@@ -362,7 +362,7 @@ export default function ExercisesView() {
                         <h3 className="text-xs font-bold text-[#171717] dark:text-[#f5f5f5] mb-1.5">
                           {step.stepTitle}
                         </h3>
-                        <div className="text-xs sm:text-sm text-[#262626] dark:text-[#d4d4d4]">
+                        <div className="text-sm sm:text-base text-[#262626] dark:text-[#d4d4d4]">
                           <FormattedMath text={step.stepContent} />
                         </div>
                       </div>
