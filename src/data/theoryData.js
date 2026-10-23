@@ -122,13 +122,7 @@ Một đại lượng nhận các giá trị số thực tùy thuộc vào kết
         title: "2. Phân phối xác suất & Tính chất",
         content: `**1. Biến ngẫu nhiên rời rạc - Bảng phân phối xác suất:**
 Bảng phân phối của $X$ nhận các giá trị $x_i$ với xác suất $p_i = P(X = x_i)$:
-$$\\begin{array}{|c|c|c|c|c|c|}
-\\hline
-X & x_1 & x_2 & \\dots & x_n & \\dots \\
-\\hline
-P & p_1 & p_2 & \\dots & p_n & \\dots \\
-\\hline
-\\end{array}$$
+$$\\begin{array}{|c|c|c|c|c|c|} \\hline X & x_1 & x_2 & \\dots & x_n & \\dots \\cr \\hline P & p_1 & p_2 & \\dots & p_n & \\dots \\cr \\hline \\end{array}$$
 Điều kiện chuẩn hóa:
 $$p_i \\ge 0 \\quad \\text{và} \\quad \\sum_{i} p_i = 1$$
 
@@ -251,19 +245,7 @@ Một cặp hai biến ngẫu nhiên $(X, Y)$ cùng xác định trên không gi
         title: "2. Phân phối đồng thời & Phân phối biên",
         content: `**1. Bảng phân phối xác suất đồng thời:**
 Cho $(X, Y)$ là vectơ ngẫu nhiên rời rạc hai chiều với $p_{ij} = P(X = x_i, Y = y_j) = P(X = x_i \\cap Y = y_j)$:
-$$\\begin{array}{|c|c|c|c|c|}
-\\hline
-Y \\backslash X & x_1 & x_2 & \\dots & x_n \\
-\\hline
-y_1 & p_{11} & p_{21} & \\dots & p_{n1} \\
-\\hline
-y_2 & p_{12} & p_{22} & \\dots & p_{n2} \\
-\\hline
-\\dots & \\dots & \\dots & \\dots & \\dots \\
-\\hline
-y_m & p_{1m} & p_{2m} & \\dots & p_{nm} \\
-\\hline
-\\end{array}$$
+$$\\begin{array}{|c|c|c|c|c|} \\hline Y \\backslash X & x_1 & x_2 & \\dots & x_n \\cr \\hline y_1 & p_{11} & p_{21} & \\dots & p_{n1} \\cr \\hline y_2 & p_{12} & p_{22} & \\dots & p_{n2} \\cr \\hline \\dots & \\dots & \\dots & \\dots & \\dots \\cr \\hline y_m & p_{1m} & p_{2m} & \\dots & p_{nm} \\cr \\hline \\end{array}$$
 
 Điều kiện chuẩn hóa:
 $$\\sum_{i=1}^n \\sum_{j=1}^m p_{ij} = 1, \\quad p_{ij} \\ge 0$$

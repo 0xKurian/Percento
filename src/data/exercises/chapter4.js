@@ -10,7 +10,7 @@ export const chapter4Exercises = [
     problem: `Khảo sát thời gian hoàn thành một tác vụ (phút) của 50 lập trình viên, ta thu được bảng số liệu ghép nhóm:
 $$\\begin{array}{c|ccccc}
 \\text{Khoang gia tri} & [10, 14) & [14, 18) & [18, 22) & [22, 26) & [26, 30] \\\\ \\hline
-\\n_i & 6 & 14 & 18 & 8 & 4
+n_i & 6 & 14 & 18 & 8 & 4
 \\end{array}$$
 a) Xác định giá trị đại diện của từng lớp và tính trung bình mẫu $\\overline{x}$.
 b) Tính phương sai mẫu $s^2$, phương sai mẫu hiệu chỉnh $s'^2$ và độ lệch chuẩn hiệu chỉnh $s'$.
@@ -55,7 +55,7 @@ $$CV = \\frac{s'}{\\overline{x}} \\times 100\\% = \\frac{4{,}4263}{19{,}2} \\tim
 Hệ số biến thiên $CV \\approx 23{,}05\\% < 33\\%$ cho thấy mức độ phân tán của dữ liệu ở mức trung bình, mẫu có tính đại diện tốt.`
       }
     ],
-    finalAnswer: "a) x_bar = 19,2 phút | b) s^2 = 19,2; s'^2 approx 19,5918; s' approx 4,4263 phút | c) CV approx 23,05%"
+    finalAnswer: "a) x̄ = 19,2 phút | b) s² = 19,2; s'² ≈ 19,5918; s' ≈ 4,4263 phút | c) CV ≈ 23,05%"
   },
   {
     id: "ex-4-02",

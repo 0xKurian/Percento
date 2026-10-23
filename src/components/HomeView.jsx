@@ -10,7 +10,7 @@ import {
   Activity,
   CheckCircle2
 } from 'lucide-react';
-import { MathView } from './MathView';
+import { MathView, FormattedMath } from './MathView';
 
 export default function HomeView({ setActiveTab }) {
   const outlineChapters = [
@@ -27,7 +27,7 @@ export default function HomeView({ setActiveTab }) {
       num: 'II',
       title: 'Biến Ngẫu Nhiên',
       points: '4 Dạng bài tập',
-      topics: 'Phân loại BNN, bảng phân phối, hàm mật độ, hàm phân phối F(x), E(X), D(X), Mode, phân phối Nhị thức, Poisson, Chuẩn.',
+      topics: 'Phân loại BNN, bảng phân phối, hàm mật độ $p(x)$, hàm phân phối $F(x)$, $E[X]$, $D[X]$, $\\text{Mode}$, phân phối Nhị thức, Poisson, Chuẩn.',
       badgeColor: 'bg-emerald-50 text-emerald-700 border-emerald-200/50 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-900/40',
     },
     {
@@ -35,7 +35,7 @@ export default function HomeView({ setActiveTab }) {
       num: 'III',
       title: 'Vectơ Ngẫu Nhiên',
       points: 'Xét n = 2',
-      topics: 'Phân phối đồng thời (n=2), phân phối biên, hàm F(x, y), hiệp phương sai Cov(X,Y), tương quan rho, XS và kỳ vọng điều kiện.',
+      topics: 'Phân phối đồng thời ($n = 2$), phân phối biên, hàm $F(x, y)$, hiệp phương sai $\\text{Cov}(X, Y)$, tương quan $\\rho_{XY}$, xác suất và kỳ vọng điều kiện.',
       badgeColor: 'bg-amber-50 text-amber-700 border-amber-200/50 dark:bg-amber-950/40 dark:text-amber-300 dark:border-amber-900/40',
     },
     {
@@ -43,7 +43,7 @@ export default function HomeView({ setActiveTab }) {
       num: 'IV',
       title: 'Thống Kê & Ước Lượng Khoảng',
       points: '4.0 điểm (Trọng tâm)',
-      topics: 'Thống kê mô tả (x_bar, s^2, s\'), ước lượng khoảng tin cậy cho Trung bình (TB), Tỷ lệ (TL), Phương sai (PS), xác định cỡ mẫu.',
+      topics: 'Thống kê mô tả ($\\overline{x}, s^2, s\'$), ước lượng khoảng tin cậy cho Trung bình (TB), Tỷ lệ (TL), Phương sai (PS), xác định cỡ mẫu tối thiểu.',
       badgeColor: 'bg-rose-50 text-rose-700 border-rose-200/50 dark:bg-rose-950/40 dark:text-rose-300 dark:border-rose-900/40',
     },
     {
@@ -51,7 +51,7 @@ export default function HomeView({ setActiveTab }) {
       num: 'V',
       title: 'Kiểm Định Giả Thuyết',
       points: '1.0 điểm',
-      topics: 'Quy trình 5 bước kiểm định tự luận chuẩn, kiểm định trung bình (KĐTB qua Z và Student), kiểm định tỷ lệ (KĐTL).',
+      topics: 'Quy trình 5 bước kiểm định tự luận chuẩn mực, kiểm định trung bình (KĐTB qua $Z$ và Student $T$), kiểm định tỷ lệ (KĐTL).',
       badgeColor: 'bg-purple-50 text-purple-700 border-purple-200/50 dark:bg-purple-950/40 dark:text-purple-300 dark:border-purple-900/40',
     },
   ];
@@ -227,9 +227,12 @@ export default function HomeView({ setActiveTab }) {
                 <h3 className="text-sm font-bold text-[#171717] dark:text-[#f5f5f5] mb-1.5">
                   Chương {oc.num}: {oc.title}
                 </h3>
-                <p className="text-xs text-[#696969] dark:text-[#8c8c8c] leading-relaxed mb-3">
-                  {oc.topics}
-                </p>
+                <div className="mb-3">
+                  <FormattedMath
+                    text={oc.topics}
+                    className="text-xs text-[#696969] dark:text-[#8c8c8c] leading-relaxed [&>p]:inline [&>p]:m-0"
+                  />
+                </div>
               </div>
 
               <div className="pt-2.5 border-t border-[#e5e5e5] dark:border-white/10 flex items-center justify-between text-xs font-medium">
