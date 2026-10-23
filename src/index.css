@@ -1,0 +1,165 @@
+@import 'katex/dist/katex.min.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4d4d4;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #333333;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a3a3a3;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #525252;
+}
+
+.katex-mathml {
+  display: none !important;
+}
+
+.katex-display {
+  margin: 0.85rem 0 !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.75rem 1rem !important;
+  background-color: #fbfbfa;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.5rem;
+}
+
+.dark .katex-display {
+  background-color: #1a1a1a;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.markdown-math-content {
+  line-height: 1.7;
+  color: #262626;
+}
+
+.dark .markdown-math-content {
+  color: #d4d4d4;
+}
+
+.markdown-math-content p {
+  margin-bottom: 0.75rem;
+}
+
+.markdown-math-content p:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-math-content ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.markdown-math-content ol {
+  list-style-type: decimal;
+  padding-left: 1.25rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.markdown-math-content li {
+  margin-bottom: 0.35rem;
+  line-height: 1.65;
+}
+
+.markdown-math-content strong {
+  font-weight: 600;
+  color: #171717;
+}
+
+.dark .markdown-math-content strong {
+  color: #f5f5f5;
+}
+
+.markdown-math-content blockquote {
+  border-left: 3px solid #0a66c2;
+  background-color: rgba(10, 102, 194, 0.05);
+  padding: 0.65rem 0.85rem;
+  margin: 0.75rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: #262626;
+}
+
+.dark .markdown-math-content blockquote {
+  border-left-color: #4a9be0;
+  background-color: rgba(74, 155, 224, 0.08);
+  color: #d4d4d4;
+}
+
+.markdown-math-content table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0.85rem 0;
+  font-size: 0.85rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+}
+
+.dark .markdown-math-content table {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.markdown-math-content th,
+.markdown-math-content td {
+  border-bottom: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  padding: 0.55rem 0.75rem;
+  text-align: left;
+}
+
+.markdown-math-content th:last-child,
+.markdown-math-content td:last-child {
+  border-right: none;
+}
+
+.markdown-math-content tr:last-child td {
+  border-bottom: none;
+}
+
+.dark .markdown-math-content th,
+.dark .markdown-math-content td {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.markdown-math-content th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+  color: #171717;
+}
+
+.dark .markdown-math-content th {
+  background-color: #262626;
+  color: #f5f5f5;
+}
